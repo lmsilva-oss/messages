@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/lmsilva-oss/messages/gen/go/greeter/v1";
+
+// The greeter service definition.
+service GreeterService {
+  // Sends a greeting
+  rpc SayHello (SayHelloRequest) returns (SayHelloResponse) {}
+}
+
+message Payload {
+  string source = 1;
+  string source_id = 2;
+  int64 source_timestamp = 3;
+  int64 ingestion_timestamp = 4;
+  string ingestion_id = 5;
+  map<string, string> payload = 6;
+}
+
+// The request message containing the user's name.
+message SayHelloRequest {
+  repeated Payload data = 1;
+}
+
+// The response message containing the greetings
+message SayHelloResponse {
+  // repeated Payload data = 1;
+}

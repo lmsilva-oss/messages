@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "KqqjqMPUpPC+3vsgudYVA927QWuSf6nXL/aUth8tNnMvsXywQqnpmNI45sFLT6AoJrWhPBiX3gjdCwpR/qAFUQ==",
+  "success": true,
+  "projectFilePath": "/Users/lucas/repos/messages/example/client/messages/messages.csproj",
+  "expectedPackageFiles": [
+    "/Users/lucas/.nuget/packages/google.protobuf/3.21.12/google.protobuf.3.21.12.nupkg.sha512"
+  ],
+  "logs": []
+}
