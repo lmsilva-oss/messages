@@ -25,6 +25,8 @@ generate: clean
 	  gen/go/proto/v1/openapi/api
 	cp ./gen/csharp/Service.cs ./example/client/messages/
 
+run:
+	go run main.go
 	
 clean:
 	find . -name "*.pb.*" -exec rm {} +;
