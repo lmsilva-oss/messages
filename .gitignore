@@ -2,3 +2,5 @@ gen/
 .vs/
 bin/
 Debug/
+*.tgz
+.DS_Store

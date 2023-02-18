@@ -1,0 +1,27 @@
+dependencies:
+- name: kube-prometheus-stack
+  repository: https://prometheus-community.github.io/helm-charts
+  version: 45.0.0
+- name: grafana
+  repository: https://grafana.github.io/helm-charts
+  version: 6.50.7
+- name: prometheus-pushgateway
+  repository: https://prometheus-community.github.io/helm-charts
+  version: 2.1.3
+- name: emqx-ee
+  repository: https://repos.emqx.io/charts
+  version: 4.4.14
+- name: mongodb
+  repository: https://charts.bitnami.com/bitnami
+  version: 13.6.1
+- name: redis
+  repository: https://charts.bitnami.com/bitnami
+  version: 17.7.5
+- name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 12.2.1
+- name: kafka
+  repository: https://charts.bitnami.com/bitnami
+  version: 21.0.1
+digest: sha256:560148519bfe8fad5d1bde35c29eae58a3f70b5e053793e0059749ea663d6dd2
+generated: "2023-02-18T15:02:57.257482-03:00"
