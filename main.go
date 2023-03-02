@@ -17,5 +17,12 @@ func main() {
 	fanOut[0] = printerOutChan
 	go printer.Print()
 	go ingestor.StartIngestor(httpBus, fanOut)
-	api.StartAPI(httpBus)
+
+	healthcheck := api.NewHealthcheck()
+
+	healthcheck.RegisterService("printer", func() api.ServiceHealthCheckStatus {
+		return api.ServiceHealthy
+	})
+
+	api.StartAPI(httpBus, healthcheck)
 }
