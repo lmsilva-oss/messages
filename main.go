@@ -12,9 +12,9 @@ func main() {
 	httpBus := make(chan openapi.ProtoPayload, HTTP_BUS_SIZE)
 
 	fanOut := make([]chan openapi.ProtoPayload, 1)
-	fanOut[0] = make(chan openapi.ProtoPayload, printerBufferSize)
 
-	printer := ingestor.NewPrinter(fanOut[0])
+	printer, printerOutChan := ingestor.NewPrinter(printerBufferSize)
+	fanOut[0] = printerOutChan
 	go printer.Print()
 	go ingestor.StartIngestor(httpBus, fanOut)
 	api.StartAPI(httpBus)
